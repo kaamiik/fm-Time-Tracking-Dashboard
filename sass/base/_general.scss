@@ -1,0 +1,18 @@
+@use "../abstracts/" as *;
+
+body {
+  font-family: $font-family-base;
+  font-weight: $font-weight-default;
+  font-size: $font-size-400;
+  color: $color-neutral-400;
+  background-color: $color-accent-700;
+  line-height: 1.5;
+}
+
+a {
+  color: $color-accent-300;
+}
+
+a:is(:hover, :focus) {
+  color: $color-primary-300;
+}

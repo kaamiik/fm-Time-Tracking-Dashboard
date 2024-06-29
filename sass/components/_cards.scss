@@ -1,0 +1,13 @@
+@use "../abstracts/" as *;
+
+.card {
+  display: grid;
+  gap: $size-4;
+  padding: $card-body-padding;
+  background-color: $color-accent-600;
+  font-family: $font-family-accent;
+  color: $color-neutral-200;
+  line-height: 1.5;
+  box-shadow: $box-shadow-1;
+  border-radius: $size-2;
+}

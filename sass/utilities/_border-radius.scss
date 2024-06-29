@@ -1,0 +1,9 @@
+@use "../abstracts/" as *;
+
+.border-radius-1 {
+  border-radius: $size-2;
+}
+
+.border-radius-2 {
+  border-radius: $size-4;
+}
