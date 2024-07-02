@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       li.innerHTML = `
-        <img class="card__image" src="assets/images/icon-${title}.svg" alt="" />
+        <img class="card__image" src="/assets/images/icon-${title}.svg" alt="" />
         <div class="card__content">
           <div class="card__header">
             <h2 class="card__title">
