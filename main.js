@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <h2 class="card__title">
               <a class="card__link" href="#">${stat.title}</a>
             </h2>
-            <button class="btn card__ellipsis-btn" aria-label="more options" aria-expanded="false">
+            <button class="btn card__ellipsis-btn" aria-label="Menu - ${title}" aria-expanded="false">
               <svg
                 width="21"
                 height="5"
