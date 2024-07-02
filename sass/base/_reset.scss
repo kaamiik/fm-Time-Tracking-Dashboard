@@ -23,13 +23,15 @@ figure,
 blockquote,
 dl,
 dd {
-  margin-block-end: 0;
+  margin: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul,
 ol {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* Set core body defaults */
@@ -38,9 +40,22 @@ body {
   line-height: 1.5;
 }
 
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
 /* A elements that don't have a class get default styles */
-a:not([class]) {
+a {
   text-decoration-skip-ink: auto;
+  color: currentColor;
+  text-decoration: none;
 }
 
 /* Make images easier to work with */

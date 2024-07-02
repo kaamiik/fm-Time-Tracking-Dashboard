@@ -10,88 +10,298 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend Mentor | Time tracking dashboard</title>
+    <script type="module" src="/main.js"></script>
     <link rel="stylesheet" href="/sass/main.scss" />
   </head>
 
   <body>
     <main>
-      Report for Jeremy Robson Daily Weekly Monthly Work 5hrs
-      <!-- daily -->
-      Previous - 7hrs
-      <!-- daily -->
-      32hrs
-      <!-- weekly -->
-      Previous - 36hrs
-      <!-- weekly -->
-      103hrs
-      <!-- monthly -->
-      Previous - 128hrs
-      <!-- monthly -->
+      <div class="container | grid margin-block-18">
+        <div class="toc">
+          <div class="profile">
+            <img
+              class="profile__image"
+              src="assets/images/image-jeremy.png"
+              alt="Smiling young man with dreadlocks wearing a beanie and headphones on a city street"
+            />
+            <h1 class="profile__heading">
+              <em style="font-style: normal">Report for</em>
+              <br />
+              Jeremy Robson
+            </h1>
+          </div>
+          <ul class="page-links" role="tablist" aria-orientation="horizontal">
+            <li role="presentation">
+              <a
+                class="current"
+                role="tab"
+                href="#panel"
+                id="daily-tab"
+                data-timeFrame="daily"
+                aria-selected="true"
+                aria-controls="panel"
+                >Daily</a
+              >
+            </li>
 
-      Play 1hr
-      <!-- daily -->
-      Previous - 2hrs
-      <!-- daily -->
-      10hrs
-      <!-- weekly -->
-      Previous - 8hrs
-      <!-- weekly -->
-      23hrs
-      <!-- monthly -->
-      Previous - 29hrs
-      <!-- monthly -->
+            <li role="presentation">
+              <a
+                role="tab"
+                href="#panel"
+                id="weekly-tab"
+                tabindex="-1"
+                data-timeFrame="weekly"
+                aria-selected="false"
+                aria-controls="panel"
+                >Weekly</a
+              >
+            </li>
 
-      Study 0hrs
-      <!-- daily -->
-      Previous - 1hr
-      <!-- daily -->
-      4hrs
-      <!-- weekly -->
-      Previous - 7hrs
-      <!-- weekly -->
-      13hrs
-      <!-- monthly -->
-      Previous - 19hrs
-      <!-- monthly -->
+            <li role="presentation">
+              <a
+                role="tab"
+                href="#panel"
+                id="monthly-tab"
+                tabindex="-1"
+                data-timeFrame="monthly"
+                aria-selected="false"
+                aria-controls="panel"
+                >Monthly</a
+              >
+            </li>
+          </ul>
+        </div>
 
-      Exercise 1hr
-      <!-- daily -->
-      Previous - 1hr
-      <!-- daily -->
-      4hrs
-      <!-- weekly -->
-      Previous - 5hrs
-      <!-- weekly -->
-      11hrs
-      <!-- monthly -->
-      Previous - 18hrs
-      <!-- monthly -->
-
-      Social 1hr
-      <!-- daily -->
-      Previous - 3hrs
-      <!-- daily -->
-      5hrs
-      <!-- weekly -->
-      Previous - 10hrs
-      <!-- weekly -->
-      21hrs
-      <!-- monthly -->
-      Previous - 23hrs
-      <!-- monthly -->
-
-      Self Care 0hrs
-      <!-- daily -->
-      Previous - 1hr
-      <!-- daily -->
-      2hrs
-      <!-- weekly -->
-      Previous - 2hrs
-      <!-- weekly -->
-      7hrs
-      <!-- monthly -->
-      Previous - 11hrs
-      <!-- monthly -->
+        <div
+          class="sections"
+          role="tabpanel"
+          id="panel"
+          aria-labelledby="daily-tab"
+        >
+          <ul class="cards | even-columns">
+            <li class="card work">
+              <img
+                class="card__image"
+                src="assets/images/icon-work.svg"
+                alt=""
+              />
+              <div class="card__content">
+                <div class="card__header">
+                  <h2 class="card__title">
+                    <a class="card__link" href="#">Work</a>
+                  </h2>
+                  <button
+                    class="btn card__ellipsis-btn"
+                    aria-label="more options"
+                    aria-expanded="false"
+                  >
+                    <svg
+                      width="21"
+                      height="5"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                        fill="#BBC0FF"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="card__description">
+                  <p class="current">5hrs</p>
+                  <p class="previous">Yesterday - 7hrs</p>
+                </div>
+              </div>
+            </li>
+            <!-- ------------------------------------------------------------ -->
+            <!-- ------------------------------------------------------------ -->
+            <li class="card play">
+              <img
+                class="card__image"
+                src="assets/images/icon-play.svg"
+                alt=""
+              />
+              <div class="card__content">
+                <div class="card__header">
+                  <h2 class="card__title">
+                    <a class="card__link" href="#">Play</a>
+                  </h2>
+                  <button
+                    class="btn card__ellipsis-btn"
+                    aria-label="more options"
+                    aria-expanded="false"
+                  >
+                    <svg
+                      width="21"
+                      height="5"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                        fill="#BBC0FF"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="card__description">
+                  <p class="current">1hr</p>
+                  <p class="previous">Yesterday - 2hrs</p>
+                </div>
+              </div>
+            </li>
+            <!-- ------------------------------------------------------------ -->
+            <!-- ------------------------------------------------------------ -->
+            <li class="card study">
+              <img
+                class="card__image"
+                src="assets/images/icon-study.svg"
+                alt=""
+              />
+              <div class="card__content">
+                <div class="card__header">
+                  <h2 class="card__title">
+                    <a class="card__link" href="#">Study</a>
+                  </h2>
+                  <button
+                    class="btn card__ellipsis-btn"
+                    aria-label="more options"
+                    aria-expanded="false"
+                  >
+                    <svg
+                      width="21"
+                      height="5"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                        fill="#BBC0FF"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="card__description">
+                  <p class="current">0hrs</p>
+                  <p class="previous">Yesterday - 1hr</p>
+                </div>
+              </div>
+            </li>
+            <!-- ------------------------------------------------------------ -->
+            <!-- ------------------------------------------------------------ -->
+            <li class="card exercise">
+              <img
+                class="card__image"
+                src="assets/images/icon-exercise.svg"
+                alt=""
+              />
+              <div class="card__content">
+                <div class="card__header">
+                  <h2 class="card__title">
+                    <a class="card__link" href="#">Exercise</a>
+                  </h2>
+                  <button
+                    class="btn card__ellipsis-btn"
+                    aria-label="more options"
+                    aria-expanded="false"
+                  >
+                    <svg
+                      width="21"
+                      height="5"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                        fill="#BBC0FF"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="card__description">
+                  <p class="current">1hr</p>
+                  <p class="previous">Yesterday - 1hr</p>
+                </div>
+              </div>
+            </li>
+            <!-- ------------------------------------------------------------ -->
+            <!-- ------------------------------------------------------------ -->
+            <li class="card social">
+              <img
+                class="card__image"
+                src="assets/images/icon-social.svg"
+                alt=""
+              />
+              <div class="card__content">
+                <div class="card__header">
+                  <h2 class="card__title">
+                    <a class="card__link" href="#">Social</a>
+                  </h2>
+                  <button
+                    class="btn card__ellipsis-btn"
+                    aria-label="more options"
+                    aria-expanded="false"
+                  >
+                    <svg
+                      width="21"
+                      height="5"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                        fill="#BBC0FF"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="card__description">
+                  <p class="current">1hr</p>
+                  <p class="previous">Yesterday - 3hrs</p>
+                </div>
+              </div>
+            </li>
+            <!-- ------------------------------------------------------------ -->
+            <!-- ------------------------------------------------------------ -->
+            <li class="card self-care">
+              <img
+                class="card__image"
+                src="assets/images/icon-self-care.svg"
+                alt=""
+              />
+              <div class="card__content">
+                <div class="card__header">
+                  <h2 class="card__title">
+                    <a class="card__link" href="#">Self Care</a>
+                  </h2>
+                  <button
+                    class="btn card__ellipsis-btn"
+                    aria-label="more options"
+                    aria-expanded="false"
+                  >
+                    <svg
+                      width="21"
+                      height="5"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                        fill="#BBC0FF"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="card__description">
+                  <p class="current">0hrs</p>
+                  <p class="previous">Yesterday - 1hr</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </main>
     <footer class="text-center" style="font-size: 0.6875rem">
       Challenge by
@@ -108,7 +318,5 @@
         >Kamran Kiani</a
       >.
     </footer>
-
-    <script src="/main.js"></script>
   </body>
 </html>

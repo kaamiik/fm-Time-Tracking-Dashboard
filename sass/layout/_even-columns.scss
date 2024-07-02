@@ -3,9 +3,14 @@
 .even-columns {
   display: grid;
   gap: var(--grid-gap, $grid-gap);
-
+  align-content: space-between;
+  height: 100%;
   @include mq(medium) {
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include mq(large) {
+    grid-template-columns: repeat(3, 1fr);
+    --grid-gap: #{$size-8};
   }
 }

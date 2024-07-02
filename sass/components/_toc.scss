@@ -1,0 +1,69 @@
+@use "../abstracts/" as *;
+
+.toc {
+  color: $color-neutral-200;
+  background-color: $color-neutral-300;
+  border-radius: 15px;
+}
+
+.profile {
+  background-color: $color-primary-100;
+  border-radius: 15px;
+  padding-block: $size-9;
+  padding-inline: $size-8;
+  display: flex;
+  align-items: center;
+  gap: $size-5;
+
+  @include mq(large) {
+    padding-block-start: $size-10;
+    padding-block-end: $size-18;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $size-10;
+  }
+
+  &__image {
+    width: 64px;
+    height: 64px;
+    border: 3px solid $color-neutral-000;
+    border-radius: 100vh;
+
+    @include mq(large) {
+      width: 78px;
+      height: 78px;
+    }
+  }
+
+  &__heading {
+    em {
+      color: $color-neutral-100;
+      font-size: $font-size-300;
+      font-weight: $font-weight-default;
+    }
+    color: $color-neutral-000;
+    font-weight: $font-weight-light;
+    font-size: $font-size-800;
+  }
+}
+
+.page-links {
+  padding-block: $size-6;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  @include mq(large) {
+    padding-block-start: $size-7;
+    padding-block-end: $size-8;
+    padding-inline-start: $size-8;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $size-5;
+  }
+
+  & > li > a:hover,
+  & > li > a:focus {
+    color: $color-neutral-000;
+  }
+}
