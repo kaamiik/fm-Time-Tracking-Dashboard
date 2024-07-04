@@ -104,6 +104,8 @@ document.addEventListener("DOMContentLoaded", () => {
             </h2>
             <button class="btn card__ellipsis-btn" aria-label="Menu - ${title}" aria-expanded="false">
               <svg
+                focusable="false"
+                aria-hidden="true"
                 width="21"
                 height="5"
                 xmlns="http://www.w3.org/2000/svg"
@@ -132,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
       li.onmouseup = () => {
         up = +new Date();
         if (up - down < 200) {
-          link.click;
+          link.click();
         }
       };
 
