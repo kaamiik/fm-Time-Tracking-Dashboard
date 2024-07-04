@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Select tab elements and tablist
   const tabs = document.querySelectorAll('[role="tab"]');
   const tabList = document.querySelector('[role="tablist"]');
+  const tabPanel = document.querySelector('[role="tabpanel"]');
   const cards = document.querySelector(".cards");
 
   // Fetch data from the JSON file
@@ -146,6 +147,16 @@ document.addEventListener("DOMContentLoaded", () => {
       tab.setAttribute("aria-selected", isActive ? "true" : "false");
       tab.setAttribute("tabindex", isActive ? "0" : "-1");
       tab.classList.toggle("current", isActive);
+
+      if (isActive) {
+        let timeFrame = tab.getAttribute("data-timeFrame");
+        tab.href = `#${timeFrame}-panel`;
+
+        tabPanel.id = `${timeFrame}-panel`;
+        tabPanel.setAttribute("aria-labeledby", `${timeFrame}-tab`);
+
+        tab.setAttribute("aria-controls", `${timeFrame}-panel`);
+      }
     });
   }
 

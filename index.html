@@ -34,11 +34,11 @@
               <a
                 class="current"
                 role="tab"
-                href="#panel"
+                href="#daily-panel"
                 id="daily-tab"
                 data-timeFrame="daily"
                 aria-selected="true"
-                aria-controls="panel"
+                aria-controls="daily-panel"
                 >Daily</a
               >
             </li>
@@ -46,12 +46,12 @@
             <li role="presentation">
               <a
                 role="tab"
-                href="#panel"
+                href="#weekly-panel"
                 id="weekly-tab"
                 tabindex="-1"
                 data-timeFrame="weekly"
                 aria-selected="false"
-                aria-controls="panel"
+                aria-controls="weekly-panel"
                 >Weekly</a
               >
             </li>
@@ -59,24 +59,19 @@
             <li role="presentation">
               <a
                 role="tab"
-                href="#panel"
+                href="#monthly-panel"
                 id="monthly-tab"
                 tabindex="-1"
                 data-timeFrame="monthly"
                 aria-selected="false"
-                aria-controls="panel"
+                aria-controls="monthly-panel"
                 >Monthly</a
               >
             </li>
           </ul>
         </div>
 
-        <div
-          class="sections"
-          role="tabpanel"
-          id="panel"
-          aria-labelledby="daily-tab"
-        >
+        <div class="sections" role="tabpanel" id="daily-panel">
           <ul class="cards | even-columns">
             <li class="card work">
               <img
