@@ -72,6 +72,10 @@
   }
 
   &__ellipsis-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $size-4;
     background-color: transparent;
     border: none;
     cursor: pointer;
